@@ -5,42 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        body,h1,p,ul,li,h2{margin: 0;padding: 0;}
-        li{list-style: none}
-        a{cursor: pointer;}
-        body{width: 1920px;}
-        .container{ background-color: #f0f2f5}
-        .header{padding: 5px 0;display: flex;justify-content:space-between;background-color: #fff;}
-        .logo{width: 352px;padding: 15px 0;padding-left: 100px;background-image: url(static/images/logo.png);background-repeat:no-repeat;background-position:35px center;color: #1890ff;}
-        .logo h1{height:36px;font-size:26px;letter-spacing:12px;}
-        .logo p{font-size:10px;}
-        .nav{padding: 15px 0;line-height: 48px;}
-        .nav a{display: inline-block;padding-left:50px;margin-right: 20px;background-repeat:no-repeat;background-position:10px center;color:#616161;}
-        .nav .a1{background-image: url("static/icon/后台-gray.png")}
-        .nav .a1:hover{background-image:url("static/icon/后台.png");color: #1890ff;}
-        .nav .a2{background-image:url("static/icon/user-gray.png")}
-        .nav .a2:hover{background-image:url("static/icon/user.png");color: #1890ff;}
-        .nav .a3{background-image:url("static/icon/exit-gray.png")}
-        .nav .a3:hover{background-image:url("static/icon/exit.png");color: #1890ff;}
-        .content{display: flex;padding: 10px 20px;margin-top: 5px;justify-content:center;}
-        .aside{width: 400px;margin-right: 20px;padding: 5px;}
-        .aside .list{padding: 10px;background: #fff;}
-        .aside .list li{display: inline-block;color: #1890ff;padding:0 10px;line-height: 40px;}
-        .aside .div1{margin: 20px 0;padding: 10px;background-color: #fff;}
-        .aside .div1 h2{line-height: 25px;font-size: 14px;color: #232323;}
-        .aside table{width: 100%;text-align: center;font-size: 14px;background-color: #fff;}
-        .aside table th{line-height: 35px;background-color: #1890ff;color: #fff;}
-        .aside table td{line-height: 35px;color: #1890ff;}
-
-        .main{width: 1470px;}
-        .main .guild{display: flex;justify-content:space-between;padding:0 10px;line-height: 30px;}
-        .main .guild .skip{background-color: #1890ff;color: #fff;padding: 0 20px;}
-
-        .main .shop{display: flex;justify-content:space-between;height: 150px;margin-top:10px;}
-
-        #map{margin-top: 20px;height: 500px;background-color: #fff;}
-    </style>
+    <link rel="stylesheet" href="./static/css/index.css">
 </head>
 <body>
     <div class='container'>
@@ -57,7 +22,7 @@
         </div>
         <div class='content'>
             <div class='aside'>
-                <div class="list">
+                <div class="list radius4">
                     <ul>
                         <li><a>全省概括</a></li>
                         <li><a>贵阳</a></li>
@@ -71,44 +36,44 @@
                         <li><a>黔西南</a></li>
                     </ul>
                 </div>
-                <div class="div1">
+                <div class="div1 radius4">
                     <h2>全省事件频次</h2>
-                    <div style="height: 90px"></div>
+                    <div id='eventFrequency'></div>
                     <h2>各地区当月事件次数</h2>
-                    <div style="height: 190px"></div>
+                    <div id='numberEvents'></div>
                 </div>
-                <table border="0" cellpadding="0" cellspacing="0">
+                <table class='radius4' border="0" cellpadding="0" cellspacing="0">
                     <tr>
                         <th>序号</th>
                         <th>预警类型</th>
                         <th>标题</th>
                         <th>触达量</th>
                     </tr>
-                    <tr>
+                    <tr class="hove">
                         <td>1</td>
                         <td>人流预警</td>
                         <td>草莓音乐节</td>
                         <td>2,300</td>
                     </tr>
-                    <tr>
+                    <tr class="hove">
                         <td>2</td>
                         <td>人流预警</td>
                         <td>草莓音乐节</td>
                         <td>2,300</td>
                     </tr>
-                    <tr>
+                    <tr class="hove">
                         <td>3</td>
                         <td>人流预警</td>
                         <td>草莓音乐节</td>
                         <td>2,300</td>
                     </tr>
-                    <tr>
+                    <tr class="hove">
                         <td>4</td>
                         <td>人流预警</td>
                         <td>草莓音乐节</td>
                         <td>2,300</td>
                     </tr>
-                    <tr>
+                    <tr class="hove">
                         <td>5</td>
                         <td>人流预警</td>
                         <td>草莓音乐节</td>
@@ -119,16 +84,16 @@
             <div class='main'>
                 <div class="guild">
                     <div>全局概览</div>
-                    <a class="skip">专项监控</a>
+                    <a class="skip radius4">专项监控</a>
                 </div>
                 <div class="shop">
-                    <div class="portion">
+                    <div class="portion radius4">
                         <div class="head">
                             <div>
                                 <h3>46</h3>
                                 应急事件
                             </div>
-                            <div>
+                            <div class='more'>
                                 <a><i></i></a>
                                 <a>更多</a>
                             </div>
@@ -138,7 +103,7 @@
                             今日新增<span>3</span>
                         </div>
                     </div>
-                    <div class="portion">
+                    <div class="portion radius4">
                         <div class="head">
                             <div>
                                <h3>216560</h3>触达人次
@@ -149,28 +114,39 @@
                             转换率<span>60%</span>
                         </div>
                     </div>
-                        <div class="portion">
-                            <div class="head">
-                                <div>
-                                    <h3>154215</h3>当前实时人数
-                                </div>
-                                <div>
-                                    <a><i></i></a>
-                                    <a>更多</a>
-                                </div>
-                                </div>
-                            <div class='ech' id='realNum'></div>
-                            <div class='foot'>
-                                    比上一时刻<span>0.2%</span>
+                    <div class="portion radius4">
+                        <div class="head">
+                           <div>
+                                <h3>154215</h3>当前实时人数
                             </div>
+                            <div class='more'>
+                                <a><i></i></a>
+                                <a>更多</a>
                             </div>
-                    <div style="width: 570px;background-color: #fff;">
+                        </div>
+                        <div class='ech' id='realNum'></div>
+                        <div class='foot'>
+                            比上一时刻<span>0.2%</span>
+                        </div>
+                    </div>
+                    <div class='pie radius4'>
+                        <p>TOP3预警</p>
+                        <div class='more' style="width: 32px;position: absolute;top: 15px;right: 15px;">
+                            <a><i></i></a>
+                            <a>更多</a>
+                        </div>
+                        <div class="box">
+                            <div class='pie-box' id='breakOut'></div>
+                            <div class='pie-box' id="disaster"></div>
+                            <div class='pie-box' id='fire'></div>
+                        </div>
                     </div>
                 </div>
-                <div id="map"></div>
+                <div id="map" class='radius4'></div>
             </div>
         </div>
-
     </div>
+    <script src="./static/js/echarts-gl.min.js"></script>
+    <script src="./static/js/index.js"></script>
 </body>
 </html>

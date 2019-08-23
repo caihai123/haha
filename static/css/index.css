@@ -1,0 +1,48 @@
+body,h1,p,ul,li,h2,h3{margin: 0;padding: 0;}
+li{list-style: none}
+a{cursor: pointer;}
+body{min-width: 1900px;}
+.radius4{border-radius: 4px;}
+.container{ background-color: #f0f2f5}
+.header{display: flex;justify-content:space-between;background-color: #fff;}
+.logo{width: 352px;padding: 14px 0;padding-left: 100px;background-image: url(../images/logo.png);background-repeat:no-repeat;background-position:35px center;color: #1890ff;}
+.logo h1{height:36px;font-size:26px;letter-spacing:18px;}
+.logo p{font-size:12px;}
+.nav{padding: 15px 0;line-height: 48px;}
+.nav a{display: inline-block;padding-left:50px;margin-right: 20px;background-repeat:no-repeat;background-position:10px center;color:#616161;}
+.nav .a1{background-image: url("../icon/stage-gray.png")}
+.nav .a1:hover{background-image:url("../icon/stage.png");color: #1890ff;}
+.nav .a2{background-image:url("../icon/user-gray.png")}
+.nav .a2:hover{background-image:url("../icon/user.png");color: #1890ff;}
+.nav .a3{background-image:url("../icon/exit-gray.png")}
+.nav .a3:hover{background-image:url("../icon/exit.png");color: #1890ff;}
+.content{display: flex;padding: 10px 20px;margin-top: 5px;justify-content:center;}
+.aside{width:365px;margin-right: 20px;padding: 5px;}
+.aside .list{padding: 10px;background: #fff;}
+.aside .list li{display: inline-block;color: #1890ff;padding:0 10px;line-height:45px;font-size: 16px;}
+.aside .div1{margin: 20px 0;padding: 10px;background-color: #fff;height: 500px;}
+.aside .div1 h2{font-size: 16px;line-height: 24px;color: #333333;}
+#eventFrequency{width: 100%;height: 180px;margin-bottom: 20px;}
+#numberEvents {width: 100%;height: 270px;}
+.aside table{width: 100%;text-align: center;font-size: 16px;background-color: #fff;}
+.aside table th{line-height:46px;background-color: #1890ff;color: #fff;}
+.aside table td{line-height:42px;color: #1890ff;}
+.aside table .hove:hover{background-color: #edf5fc;}
+
+.main{width: 1470px;}
+.main .guild{display: flex;justify-content:space-between;padding:0 10px;line-height: 30px;}
+.main .guild .skip{width: 110px;height: 36px;line-height: 36px;text-align: center;background-color: #1890ff;color: #fff;padding: 0 20px;}
+.main .shop{display: flex;justify-content:space-between;height:200px;margin-top:10px;}
+.main .shop .portion{width: 280px;box-sizing: border-box;background-color: #fff;padding: 15px 0;}
+.main .shop .head{display: flex;padding:0 15px;justify-content:space-between;font-size: 14px;color: #a1a1a1;box-sizing: border-box;}
+.main .shop .head h3{font-size: 24px;height: 23px;line-height: 24px;padding-bottom: 10px;color: #2f3034;}
+.main .shop .more a{display: block;text-align: center;font-size: 16px;color: #1890ff;}
+.main .shop .more i{display: block;width: 21px;height: 21px;background-image: url(../icon/hint.png);background-repeat:no-repeat;padding-bottom: 10px;}
+.main .shop .pie{width: 570px;padding: 15px;position: relative;background-color: #fff;font-size: 16px;color: #999999; }
+.main .shop .ech{width: 100%;height: 90px;}
+.main .shop .box{display: flex;padding-right: 20px;}
+.main .shop .box .pie-box{width: 33%;height: 150px;}
+.main .shop .foot{margin:0 15px;border-top:1px solid #a1a1a1;height: 40px;line-height: 40px;font-size: 14px;color: #a1a1a1;box-sizing: border-box;}
+.main .shop .foot span{margin: 0 10px;font-size: 16px;color: #1890ff;}
+
+#map{margin-top: 20px;height:666px;background-color: #fff;}
