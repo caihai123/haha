@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>新增预警</title>
    <link rel="stylesheet" href="./static/css/header.css">
    <link rel="stylesheet" href="./static/css/style.css">
 </head>
@@ -24,9 +24,130 @@
         <div class='main'>
             <div id="map"></div>
             <div class='main-right'>
-                <div class='tabs'></div>
+                <div class='tabs'>
+                    <ul id='ul' style="left: 40px;">
+                        <li><a class='tab active'>人民广场片区</a></li>
+                        <li><a class='tab'>大十字片区</a></li>
+                        <li><a class='tab'>小十字片区</a></li>
+                        <li><a class='tab'>喷水池片区</a></li>
+                        <li><a class='tab'>花果园片区</a></li>
+                        <li><a class='tab'>其他片区</a></li>
+                        <li><a class='tab'>喷水池片区</a></li>
+                        <li><a class='tab'>花果园片区</a></li>
+                        <li><a class='tab'>其他片区</a></li>  
+                    </ul>
+                    <a class='roll arr'></a>
+                    <a class='roll arrow'></a>
+                </div>
+                <div class='box'>
+                    <div class='cont'>
+                        <div class='weather'>
+                            <div class='tit'>
+                                <div style="font-size: 16px;opacity:1;">贵阳市</div>
+                                <div style="font-size: 24px;opacity:1;">28&#8451;</div>
+                            </div>
+                            <p style="font-size: 16px;color: #48b8ff;">降雨量80mm</p>
+                            <a class='add'>新增预警</a>
+                        </div>
+                        <div class='service'>
+                            <div class='table'>当前人流量</div>
+                            <div class='num'>3580</div>
+                            <div class='ech' id='visitors'></div>
+                        </div>
+                        <div class='service'>
+                                <div class='table'>当前人流量</div>
+                                <div class='num'>3580</div>
+                                <div class='ech' id='eventsNum'></div>
+                        </div>
+                        <div class='service'>
+                                <div class='table'>当前人流量</div>
+                                <div class='num'>3580</div>
+                                <div class='ech' id='synthesize'></div>
+                        </div>
+                    </div>
+                    <div style="background-color: #fff;">
+                        <div id='ridership'></div>
+                    </div>
+                    <div style="width: 100%;padding-top:20px;display: flex;margin: 20px 0;background-color: #fff;">
+                        <div id='structure-age'></div>
+                        <div id='structure-sex'></div>
+                    </div>
+                    <div>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th>序号</th>
+                                        <th>预警类型</th>
+                                        <th>标题</th>
+                                        <th>触达量</th>
+                                    </tr>
+                                    <tr class="hove">
+                                        <td>1</td>
+                                        <td>人流预警</td>
+                                        <td>草莓音乐节</td>
+                                        <td>2,300</td>
+                                    </tr>
+                                    <tr class="hove">
+                                        <td>2</td>
+                                        <td>人流预警</td>
+                                        <td>草莓音乐节</td>
+                                        <td>2,300</td>
+                                    </tr>
+                                    <tr class="hove">
+                                        <td>3</td>
+                                        <td>人流预警</td>
+                                        <td>草莓音乐节</td>
+                                        <td>2,300</td>
+                                    </tr>
+                                    <tr class="hove">
+                                        <td>4</td>
+                                        <td>人流预警</td>
+                                        <td>草莓音乐节</td>
+                                        <td>2,300</td>
+                                    </tr>
+                                    <tr class="hove">
+                                        <td>5</td>
+                                        <td>人流预警</td>
+                                        <td>草莓音乐节</td>
+                                        <td>2,300</td>
+                                    </tr>
+                                </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="./static/js/echarts-gl.min.js"></script>
+    <script src="./static/js/ech.js"></script>
+    <script src="./static/js/style.js"></script>
+    <script>
+        (function(){
+            var element = document.getElementById('ul');
+            var tabs = element.getElementsByClassName('tab');
+            for(var i = 0;i < tabs.length;i ++){
+                tabs[i].addEventListener('click',function(){
+                    element.getElementsByClassName("active")[0].setAttribute("class","tab");
+                    this.setAttribute("class","tab active");
+                },false)
+            }
+            var ulWidth = element.offsetWidth;//获取ul的宽度
+            var num = 832 - ulWidth;//832 = 870 - 32
+            document.getElementsByClassName('arr')[0].addEventListener('click',function(){
+                var left = parseInt(element.style.left);
+                    left = left + 300;
+                    if(left > 40){
+                        left = 40;
+                    }
+                element.style.left = left +'px';
+            },false);
+            document.getElementsByClassName('arrow')[0].addEventListener('click',function(){
+                var left = parseInt(element.style.left);
+                    left = left - 300;
+                    if(left< num){
+                        left = num;
+                    }
+                element.style.left = left  +'px';
+            },false);
+        }())
+    </script>
 </body>
 </html>
