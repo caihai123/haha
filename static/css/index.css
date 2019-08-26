@@ -1,4 +1,3 @@
-
 .aside{width:363px;margin-right: 20px;padding: 5px;}
 .aside .list{padding: 10px;background: #fff;}
 .aside .list li{display: inline-block;color: #1890ff;padding:0 10px;line-height:45px;font-size: 16px;}
@@ -16,7 +15,7 @@
 .main .guild .skip{width: 130px;height: 34px;line-height: 34px;text-align: center;background-color: #1890ff;color: #fff;padding: 0 20px;}
 .main .shop{display: flex;justify-content:space-between;height:200px;margin-top:10px;}
 .main .shop .portion{width: 274px;box-sizing: border-box;background-color: #fff;padding: 15px 0;}
-.main .shop .head{display: flex;padding:0 15px;justify-content:space-between;font-size: 14px;color: #a1a1a1;box-sizing: border-box;}
+.main .shop .head{display: flex;padding:0 25px;justify-content:space-between;font-size: 14px;color: #a1a1a1;box-sizing: border-box;}
 .main .shop .head h3{font-size: 24px;height: 23px;line-height: 24px;padding-bottom: 10px;color: #2f3034;}
 .main .shop .more a{display: block;font-size: 16px;color: #1890ff;}
 .main .shop .more i{display: block;width: 21px;height: 21px;background-image: url(../icon/hint.png);background-repeat:no-repeat;padding-bottom: 10px;}
@@ -24,7 +23,8 @@
 .main .shop .ech{width: 100%;height: 90px;}
 .main .shop .box{display: flex;padding-right: 20px;}
 .main .shop .box .pie-box{width: 33%;height: 150px;}
-.main .shop .foot{margin:0 15px;border-top:1px solid #a1a1a1;height: 40px;line-height: 40px;font-size: 14px;color: #a1a1a1;box-sizing: border-box;}
-.main .shop .foot span{margin: 0 10px;font-size: 16px;color: #1890ff;}
+.main .shop .foot{margin:0 15px;padding: 0 20px;border-top:1px solid #eee;height: 40px;line-height: 40px;font-size: 14px;color: #a1a1a1;box-sizing: border-box;}
+.main .shop .foot span{margin: 0 10px;font-size: 14px;color: #1890ff;}
+.main .shop .foot .icon{padding-left: 30px;background-position:15px center;background-repeat: no-repeat;}
 
 #map{margin-top: 20px;height:655px;background-color: #fff;}
